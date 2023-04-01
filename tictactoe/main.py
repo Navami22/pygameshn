@@ -15,7 +15,7 @@ def draw_window()
     for x in range(0,3):
         pygame.draw.line(window,lineclr,(0,x*100),(width,x*100))
         pygame.draw.line(window,linecr,(x*100,0),(x*100,height))
-    //pygame.display.update()
+    pygame.display.update()
 
 run=True
 while run:
