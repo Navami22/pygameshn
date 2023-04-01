@@ -11,7 +11,12 @@ icon = pygame.image.load("tic-tac-toe.png")
 pygame.display.set_icon(icon)
 x=pygame.image.load("x.png")
 o=pygame.image.load("o.png")
+
 markers=[]
+game=False
+flag=False
+player=1
+
 def draw_window():
     clr=(0,0,0)
     lineclr=(255,255,255)
@@ -30,6 +35,17 @@ while run:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run=False
+        if game == False:
+            if event.type == pygame.MOUSEBUTTONDOWN and flag==False:
+                flag=True
+            if event.type == pygame.MOUSEBUTTONUP and flag==True:
+                flag=False
+                pos = pygame.mouse.get_pos()
+                x = pos[0] // 100
+                y = pos[1] // 100
+                if markers[x][y] == 0:
+                    markers[x][y] = player
+                    player *= -1
     
 pygame.quit()
             
