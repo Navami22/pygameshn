@@ -9,10 +9,12 @@ window=pygame.display.set_mode((WIDTH,HEIGTH))
 pygame.display.set_caption("TIC TAC TOE")
 icon = pygame.image.load("tic-tac-toe.png")
 pygame.display.set_icon(icon)
+x=pygame.image.load("x.png")
+o=pygame.image.load("o.png")
 
 def draw_window():
-    clr=(255,255,255)
-    lineclr=(50,50,50)
+    clr=(0,0,0)
+    lineclr=(255,255,255)
     window.fill(clr)
     for x in range(1,3):
         pygame.draw.line(window,lineclr,(0,x*100),(WIDTH,x*100))
