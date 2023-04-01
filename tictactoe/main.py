@@ -42,8 +42,8 @@ while run:
 		if event.type == pygame.MOUSEBUTTONUP and clicked == True:
 			clicked = False
 			pos = pygame.mouse.get_pos()
-            cell_x=pos[0]
-            cell_y=pos[1]
+            		cell_x=pos[0]
+            		cell_y=pos[1]
     
 pygame.quit()
             
