@@ -35,6 +35,11 @@ while run:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run=False
+        if event.type == pygame.MOUSEBUTTONDOWN and clicked == False:
+			clicked = True
+		if event.type == pygame.MOUSEBUTTONUP and clicked == True:
+			clicked = False
+			pos = pygame.mouse.get_pos()
     
 pygame.quit()
             
