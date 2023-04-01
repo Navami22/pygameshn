@@ -13,6 +13,8 @@ x=pygame.image.load("x.png")
 o=pygame.image.load("o.png")
 
 markers=[]
+pos=[]
+
 def draw_window():
     clr=(0,0,0)
     lineclr=(255,255,255)
