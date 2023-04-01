@@ -11,7 +11,7 @@ icon = pygame.image.load("tic-tac-toe.png")
 pygame.display.set_icon(icon)
 x=pygame.image.load("x.png")
 o=pygame.image.load("o.png")
-
+markers=[]
 def draw_window():
     clr=(0,0,0)
     lineclr=(255,255,255)
