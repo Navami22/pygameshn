@@ -12,6 +12,9 @@ pygame.display.set_icon(icon)
 x=pygame.image.load("x.png")
 o=pygame.image.load("o.png")
 markers=[]
+clicked=False
+pos=[]
+
 def draw_window():
     clr=(0,0,0)
     lineclr=(255,255,255)
@@ -21,7 +24,11 @@ def draw_window():
         pygame.draw.line(window,lineclr,(x*100,0),(x*100,HEIGTH))
     pygame.display.update()
     
-    
+for x in range(3):
+    row=[0]*3
+    markers.append(row)
+
+print(markers)
 
 run=True
 
@@ -30,6 +37,13 @@ while run:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run=False
+        if event.type == pygame.MOUSEBUTTONDOWN and clicked == False:
+            clicked = True
+        if event.type == pygame.MOUSEBUTTONUP and clicked == True:
+            clicked = False
+            pos = mouse.get_pos()
+            cell_x=pos[0]
+            cell_y=pos[1]
     
 pygame.quit()
             
